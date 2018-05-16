@@ -1,0 +1,74 @@
+.sidenav{
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 3px 0px 6px;
+    visibility: visible;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 13px;
+    left: 0;
+    top: 52px;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+.sidenav a{
+    font-family: 'Open Sans' ,sans-serif;
+    font-weight: 400;
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: 0s;
+    color:#4c7184;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.sidenav i{
+    padding-left: 16px;
+    font-size: 17px;
+    width: 26px;
+}
+.sdnam{
+    padding-left: 14px;
+}
+.collapse i{
+    padding-left: 12px;
+}
+.subnam{
+    padding-left: 5px;
+}
+
+.sidenav a:hover {
+
+    background-color: lightgrey;
+    color: #24292e;    
+}
+
+
+.submenu {
+    font-family: 'Open Sans' ,sans-serif;
+    padding: 5px 0px 5px 0px;
+    padding-left: 28px;
+    border-right: 2px solid #24292e;
+    font-size: 13px;
+    font-weight: 400;
+    color: #4c7184;
+}
+.submenu:hover {
+    background-color: lightgrey;
+    width: 100%;
+    padding-left: 26px;    
+    color: #24292e;
+    border-left: 2px solid red; 
+}
+
+
+

@@ -1,0 +1,83 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}  
+/*header*/
+
+.header-color{ 
+    background:#24292e; box-shadow: rgba(0, 0, 0.24, 0.24) 3px 4px 6px;z-index: 2;
+}
+.navbar-brand{
+    color:#fff
+}
+.nav-toggle{
+    font-size: 25px;
+    cursor:pointer;
+    margin-left: 76px ;
+    color:#FFFDE7; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0px;
+    top: 0px;
+}
+.admin-btn{
+    background-color:#24292e;
+    color:white;
+}
+.logout-btn{
+    background-color:#24292e;
+    border:none;
+    outline: none
+}
+.logout{
+     font-size: 20px;
+     margin-right: 10px;
+     color: #FFFDE7;
+     cursor:pointer;
+}
+
+
+li.nav-item:hover{
+    background-color:  	black; 
+    color:#fff;
+    text-decoration: none;
+}
+a.dropdown-item:hover{
+    background-color:  	black; 
+    color:#fff;
+    text-decoration: none;
+
+}
+.btnyes:hover{
+    background-color: #24292e;
+    color:white;
+    outline: none;
+
+}
+.btnno:hover{
+    background-color: #24292e;
+    color:white;
+    outline: none;
+
+}
+
+#container{
+
+  padding: 0 0 60px;
+    margin-left: 240px ;
+    transition: 0.1s;
+    margin-top: 65px;
+    min-height: 100%;
+    
+    margin-right: 10px !important;
+}
+

@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(240, 240, 240)
+}
+
+form {
+    border: 2px solid #f1f1f1;
+    width: 27%;
+    margin-left: 37%;
+    margin-top: 5%;
+    height: 400px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+input[type=text], input[type=password] {
+    width: 85%;
+    height: 5%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    margin-left: 9%;
+    display: block;
+    border: 1px solid rgb(204, 204, 204);
+    box-sizing: border-box;
+    background: rgb(240, 240, 240);
+}
+
+button {
+    background-color: #24292e;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    margin-right: 2px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    width: 85%;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 4px;
+}
+
+
+
+
+

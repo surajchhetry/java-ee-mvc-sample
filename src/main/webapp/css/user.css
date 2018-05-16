@@ -1,0 +1,18 @@
+
+
+.container {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    
+    
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 8px;
+}
