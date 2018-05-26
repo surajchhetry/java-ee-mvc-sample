@@ -27,7 +27,7 @@ class TodoServiceImpl implements TodoService{
     @Override
     public void add(Todo todo) {
         if(StringUtils.isBlank(todo.getTitle()))
-            throw new TodoException(" Title is empty");
+            throw new TodoException(TodoException.ExceptionType.TODO_TITLE_EMPTY);
         this.todoRepository.add(todo);
     }
 }
