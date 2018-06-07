@@ -6,6 +6,17 @@
             <input type="hidden" name="${mvc.csrf.name}" value="${mvc.csrf.token}"/>
             <h4>Add User:</h4>
 
+            <c:if test="${bindingResult.isFailed()}">
+                <p>Form validation failed. Reasons:</p>
+                <ul>
+                    <c:forEach items="${bindingResult.allValidationErrors}" var="validationError">
+                        <li>
+                            <c:out value="${validationError.paramName}: ${validationError.message}"/>
+                        </li>
+                    </c:forEach>
+                </ul>
+            </c:if>
+
             <div class="form-group row">
                 <label for="fullName" class="col-sm-2 col-form-label">Full Name:</label>
                 <div class="col-sm-10">

@@ -31,7 +31,7 @@ public class UserController {
     private Message message;
     private Logger logger = Logger.getLogger(UserController.class.getSimpleName());
     //private UserModel userModel;
-    private Models userModel;
+    private Models models;
     private BindingResult bindingResult;
     private Error error;
 
@@ -40,10 +40,10 @@ public class UserController {
     }
 
     @Inject
-    public UserController(TodoService todoService,Message message,Models userModel,BindingResult bindingResult,Error error) {
+    public UserController(TodoService todoService,Message message,Models models,BindingResult bindingResult,Error error) {
         this.todoService = todoService;
         this.message = message;
-        this.userModel = userModel;
+        this.models = models;
         this.bindingResult = bindingResult;
         this.error = error;
     }
@@ -65,13 +65,22 @@ public class UserController {
     @Path("{userid}")
     public void showUser(@PathParam("userid") String userId){
         this.logger.info(" USer ID :: " + userId);
-        this.userModel.put("userModel",new UserModel("JAKASH ...."));
+        this.models.put("userModel",new UserModel("JAKASH ...."));
     }
 
     @POST
     @Path("new")
     @CsrfValid
-    public Response addNewTodo(@BeanParam UserModel userModel){
+    public Response addNewTodo(@Valid @BeanParam UserModel userModel){
+
+        if (bindingResult.isFailed()) {
+            models.put("bindingResult", bindingResult);
+            return Response.ok("users/add.jsp").build();
+        }else {
+            this.message.addInfoMessage("User added successfully");
+            return Response.ok(ControllerUtils.REDIRECT_TO + "users").build();
+        }
+/*
         this.logger.info(" SUBMITTED :: "+userModel.toString());
         if(StringUtils.isBlank(userModel.getName())) {
              error.addMessage("fullName", "Is blank");
@@ -81,5 +90,6 @@ public class UserController {
             this.message.addInfoMessage("User added successfully");
             return Response.ok(ControllerUtils.REDIRECT_TO + "users").build();
         }
+        */
     }
 }

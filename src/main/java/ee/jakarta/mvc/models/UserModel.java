@@ -3,14 +3,17 @@ package ee.jakarta.mvc.models;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import javax.mvc.binding.MvcBinding;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import javax.ws.rs.FormParam;
 
 public class UserModel {
 
     @MvcBinding
     @FormParam("fullName")
-    @NotEmpty(message = "Full Name is empty")
+    @NotBlank(message = "Full Name is empty")
+    @Size(max = 50)
     private String name;
     @FormParam("userId")
     private String userId;
