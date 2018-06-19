@@ -32,7 +32,7 @@
         </dependency>
         <dependency>
             <groupId>org.mvc-spec.ozark</groupId>
-            <artifactId>ozark-jersey</artifactId>
+            <artifactId>ozark-resteasy</artifactId>
             <version>1.0.0-m03</version>
         </dependency>
         <dependency>
@@ -130,6 +130,15 @@
                         <version>${junit.jupiter.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <outputDirectory>${env.WILDFLY_HOME}/standalone/deployments</outputDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>
